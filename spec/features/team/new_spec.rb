@@ -25,5 +25,7 @@ RSpec.describe 'Teams New page' do
       expect(current_path).to eq("/competitions/#{competition_1.id}")
       expect(page).to have_content("hometown7")
       expect(page).to have_content("nickname32")
+      save_and_open_page
+      
     end
 end
