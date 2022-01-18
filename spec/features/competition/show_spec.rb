@@ -13,6 +13,11 @@ RSpec.describe 'Competition show page' do
   let!(:ct_2) { CompetitionTeam.create!(competition: competition_1, team: team_2)}
   let!(:ct_3) { CompetitionTeam.create!(competition: competition_2, team: team_3)}
 
+  let!(:player1) { Player.create!(name: "name 1", age: 20, team: team_1)}
+  let!(:player2) { Player.create!(name: "name 2", age: 25, team: team_1)}
+  let!(:player3) { Player.create!(name: "name 3", age: 30, team: team_2)}
+
+
   it "checks that the page has the competions information" do
     visit "/competitions/#{competition_1.id}"
         save_and_open_page
@@ -29,5 +34,11 @@ RSpec.describe 'Competition show page' do
     expect(page).to have_content(team_1.nickname)
     expect(page).to have_content(team_2.hometown)
     expect(page).not_to have_content(team_3.hometown)
+  end
+
+  it "checks that the teams average age is showing " do
+    visit "/competitions/#{competition_1.id}"
+    expect(page).to have_content(team_1.average_age)
+    expect(page).to have_content(team_2.average_age)
   end
 end

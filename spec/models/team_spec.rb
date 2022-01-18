@@ -16,7 +16,6 @@ RSpec.describe Team, type: :model do
     player1 = Player.create!(name: "name 1", age: 20, team: team1)
     player2 = Player.create!(name: "name 2", age: 25, team: team1)
     player3 = Player.create!(name: "name 3", age: 30, team: team1)
-
     expect(team1.average_age).to eq(25)
   end
 end
