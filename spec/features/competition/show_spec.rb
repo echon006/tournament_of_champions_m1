@@ -41,4 +41,10 @@ RSpec.describe 'Competition show page' do
     expect(page).to have_content(team_1.average_age)
     expect(page).to have_content(team_2.average_age)
   end
+
+  it "has a link to create a new team" do
+    visit "/competitions/#{competition_1.id}"
+    click_on "New Team"
+    expect(current_path).to eq("/competitions/#{competition_1.id}/new")
+  end
 end
