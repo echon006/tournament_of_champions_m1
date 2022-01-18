@@ -20,7 +20,6 @@ RSpec.describe 'Competition show page' do
 
   it "checks that the page has the competions information" do
     visit "/competitions/#{competition_1.id}"
-        save_and_open_page
     expect(page).to have_content(competition_1.name)
     expect(page).to have_content(competition_1.location)
     expect(page).to have_content(competition_1.sport)
@@ -45,6 +44,6 @@ RSpec.describe 'Competition show page' do
   it "has a link to create a new team" do
     visit "/competitions/#{competition_1.id}"
     click_on "New Team"
-    expect(current_path).to eq("/competitions/#{competition_1.id}/new")
+    expect(current_path).to eq("/competitions/#{competition_1.id}/teams/new")
   end
 end

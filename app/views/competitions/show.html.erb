@@ -1,7 +1,7 @@
 <h1> <%= @competition.name %></h1>
   <h3><%= @competition.location %></h3>
   <h3><%= @competition.sport %></h3>
-  <%= link_to %>
+  <%= link_to "New Team", new_competition_team_path(@competition) %>
   <% @competition.teams.each do |team| %>
   <h4>Team id: <%= team.id %></h4>
   <p>Team hometown: <%= team.hometown %></p>
