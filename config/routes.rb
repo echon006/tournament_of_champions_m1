@@ -4,4 +4,5 @@ resources :competitions do
   resources :teams, only: [:new, :create]
   resources :competitions
 end
+resources :teams, only: [:index]
 end

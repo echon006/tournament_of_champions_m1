@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Teams New page' do
+RSpec.describe 'Teams Index page' do
   let!(:competition_1) { Competition.create!(name: "Competition 1", location: "Location 1", sport: "Sport 1")}
   let!(:competition_2) { Competition.create!(name: "Competition 2", location: "Location 1", sport: "Sport 1")}
 
@@ -16,14 +16,15 @@ RSpec.describe 'Teams New page' do
   let!(:player2) { Player.create!(name: "name 2", age: 25, team: team_1)}
   let!(:player3) { Player.create!(name: "name 3", age: 30, team: team_2)}
 
+  it "checks that the page has the teams information listed" do
+    visit "/teams"
+    expect(page).to have_content(team_1.nickname)
+    expect(page).to have_content(team_1.average_age)
+  end
 
-  it 'has a form to create a new team' do
-      visit "/competitions/#{competition_1.id}/teams/new"
-      fill_in("Hometown", with: "hometown7")
-      fill_in("Nickname", with: "nickname32")
-      click_button "Submit"
-      expect(current_path).to eq("/competitions/#{competition_1.id}")
-      expect(page).to have_content("hometown7")
-      expect(page).to have_content("nickname32")
-    end
+  it "checks that the teams are in order desc" do
+    visit "/teams"
+    expect(page).to appear_before(team_1.nickname)
+    expect(page).to have_content(team_1.average_age)
+  end
 end

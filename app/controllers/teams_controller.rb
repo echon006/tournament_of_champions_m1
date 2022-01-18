@@ -1,4 +1,9 @@
 class TeamsController < ApplicationController
+
+  def index
+    @teams = Team.all
+  end
+
   def new
     @competition = Competition.find(params[:competition_id])
   end

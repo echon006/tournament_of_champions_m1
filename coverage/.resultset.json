@@ -1,0 +1,85 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/ericchon/turing/2mod/final/tournament_of_champions_m1/app/models/competition.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/2mod/final/tournament_of_champions_m1/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/2mod/final/tournament_of_champions_m1/spec/models/player_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/2mod/final/tournament_of_champions_m1/app/models/player.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/2mod/final/tournament_of_champions_m1/spec/models/team_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/2mod/final/tournament_of_champions_m1/app/models/team.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/2mod/final/tournament_of_champions_m1/app/models/competition_team.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1642528624
+  }
+}
