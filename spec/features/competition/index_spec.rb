@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Competition show page' do
+RSpec.describe 'Competition index page' do
 
   let!(:competition_1) { Competition.create!(name: "Competition 1", location: "Location 1", sport: "Sport 1")}
   let!(:competition_2) { Competition.create!(name: "Competition 2", location: "Location 1", sport: "Sport 1")}
@@ -13,7 +13,6 @@ RSpec.describe 'Competition show page' do
 
   it "checks for all the competitions" do
     visit '/competitions'
-    save_and_open_page
     expect(page).to have_content(competition_1.name)
     expect(page).to have_content(competition_2.name)
     expect(page).to have_content(competition_3.name)
