@@ -19,4 +19,10 @@ RSpec.describe 'Competition show page' do
     expect(page).to have_content(competition_3.name)
     expect(page).to have_content(competition_4.name)
   end
+
+  it "check for a link to its show page " do
+    visit '/competitions'
+    click_on "Competition id: #{competition_1.id}"
+    expect(current_path).to eq("/competitions/#{competition_1.id}")
+  end
 end
