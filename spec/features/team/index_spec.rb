@@ -24,7 +24,7 @@ RSpec.describe 'Teams Index page' do
 
   it "checks that the teams are in order desc" do
     visit "/teams"
-    expect(page).to appear_before(team_1.nickname)
+    expect(team_2.nickname).to appear_before(team_1.nickname)
     expect(page).to have_content(team_1.average_age)
   end
 end
